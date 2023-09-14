@@ -9,8 +9,13 @@ void draw() {
   stroke(255);
   for(int i = 460; i >= -40; i -= 20){
     for(int j = 970; j >= -60; j -= 30){
-      koiColors();
-      scale(j,i);
+	if((i%20) == 0){
+   koiColors();
+               scale(j+15,i);
+} else{
+               koiColors();
+               scale(j,i);
+      }
     }
   }
 }
@@ -33,4 +38,3 @@ void scale(int x, int y) {
   rect(x,y,w,h); 
   arc(x + w/2, y + h, w, h/2, 0, PI);
 }
-
