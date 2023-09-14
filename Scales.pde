@@ -9,7 +9,7 @@ void draw() {
   stroke(255);
   for(int i = 460; i >= -40; i -= 20){
     for(int j = 970; j >= -60; j -= 30){
-       if((i%20) == 0){
+       if((i%20)%2 == 0){
 	   koiColors();
            scale(j+15,i);
 	}else{
